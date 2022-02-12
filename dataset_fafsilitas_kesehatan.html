@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html prefix="dct: http://purl.org/dc/terms/
+              rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+              dcat: http://www.w3.org/ns/dcat#
+              foaf: http://xmlns.com/foaf/0.1/">
+    <head>
+        <title>DCAT in RDFa</title>
+    </head>
+ <body>
+ <div typeof="dcat:Dataset" resource="http://gov.example.org/dataset/finances">
+            <h1 property="dct:title">Contoh DCAT Dataset</h1> 
+
+              <p property="dct:created" content='2022-02-11T09:00:00+00:00' datatype='xsd:dateTime'>11th Februari 2022</p>
+              <p property="dct:modified" content='2022-02-11T13:39:36+00:00' datatype='xsd:dateTime'>11th Februari 2022</p>
+
+              <p property="dct:description">Ini adalah deskripsi.<p>
+
+            <div property="dct:license" 
+                 resource="https://data.go.id/policy">
+    <a href="https://data.go.id/policy">
+                <span property="dct:title">Indonesia Open Government Licence (OGL)</span>
+                </a>
+            </div>
+
+            <div property="dct:publisher" 
+                 resource="https://opendata.blitarkab.go.id">
+                <a href="https://opendata.blitarkab.go.id/about" about="https://opendata.blitarkab.go.id/about" property="foaf:homepage">
+                    <span property="foaf:name">Contoh Publisher</span>
+                </a>
+            </div>
+
+            <div>
+                <span property="dcat:keyword">Examples</span>, <span property="dcat:keyword">DCAT</span>
+            </div>
+
+            <div>
+                <a href="https://katalog.data.go.id/dataset/211456d8-dccb-4f79-87ca-92732c997f51.jsonld" property="dcat:accrualPeriodicity">Weekly</a>
+            </div>
+
+      <div property='dcat:distribution' typeof='dcat:Distribution'>
+          <span property="dct:title">CSV download</span>
+          <ul>
+              <li><strong>Format</strong> <span content='text/csv' property='dcat:mediaType'>CSV</span></li>
+              <li><strong>Size</strong> <span content='1166e418-64b3-45e0-9049-eeff1396bc0a' datatype='xsd:decimal' property='dcat:byteSize'>102KB</span></li>
+              <li><strong>Issues</strong> <span property='dct:issued'>2022-02-11</span></li>
+          </ul>        
+          <p><a class='btn btn-primary' href='https://opendata.blitarkab.go.id/dataset/211456d8-dccb-4f79-87ca-92732c997f51/resource/1166e418-64b3-45e0-9049-eeff1396bc0a/download/kode_faskes_blitarkab_.csv' property='dcat:accessURL'>Download the full dataset</a></p>
+      </div>            
+
+    </body>
+</html>
